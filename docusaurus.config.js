@@ -42,14 +42,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/JDS-Industries/v2-documentation/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/JDS-Industries/v2-documentation/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -77,6 +77,12 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'docSidebar',
+            sidebarId: 'gitSidebar',
+            position: 'left',
+            label: 'Git',
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
