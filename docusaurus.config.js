@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'V2-Documentation',
-  tagline: 'Dinosaurs are cool, So is F1',
+  title: 'Welcome to v2-Documentation',
+  tagline: 'Solution to all of your problems',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -64,10 +64,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'JDS Docs',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'https://res.cloudinary.com/business-products/image/upload/f_auto,q_auto/v1674774536/v2/logos/jds-logo-icon-only_sevd52.svg',
         },
         items: [
           {
@@ -84,7 +84,7 @@ const config = {
             label: 'Git',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/JDS-Industries/',
             label: 'GitHub',
             position: 'right',
           },
