@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const sidebars = require('./sidebars');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -69,6 +70,9 @@ const config = {
           alt: 'My Site Logo',
           src: 'https://res.cloudinary.com/business-products/image/upload/f_auto,q_auto/v1674774536/v2/logos/jds-logo-icon-only_sevd52.svg',
         },
+        // docs: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        // },
         items: [
           {
             type: 'docSidebar',
@@ -140,7 +144,6 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-
     plugins: [require.resolve('docusaurus-lunr-search')],
 };
 
