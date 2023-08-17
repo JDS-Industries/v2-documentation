@@ -12,16 +12,18 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://JDS-Industries.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/v2-documentation',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'JDS-Industries', // Usually your GitHub org/user name.
   projectName: 'v2-documentation', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
 
+  trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -70,9 +72,6 @@ const config = {
           alt: 'My Site Logo',
           src: 'https://res.cloudinary.com/business-products/image/upload/f_auto,q_auto/v1674774536/v2/logos/jds-logo-icon-only_sevd52.svg',
         },
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        // },
         items: [
           {
             type: 'docSidebar',
@@ -102,7 +101,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/tutorial/intro',
               },
             ],
           },
