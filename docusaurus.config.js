@@ -70,22 +70,18 @@ const config = {
           alt: 'My Site Logo',
           src: 'https://res.cloudinary.com/business-products/image/upload/f_auto,q_auto/v1674774536/v2/logos/jds-logo-icon-only_sevd52.svg',
         },
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        // },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'docSidebar',
             sidebarId: 'gitSidebar',
             position: 'left',
             label: 'Git',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'mrcSidebar',
+            position: 'left',
+            label: 'Mrc',
           },
           {
             href: 'https://github.com/JDS-Industries/',
@@ -144,7 +140,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-    plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [require.resolve('docusaurus-lunr-search')],
 };
 
 module.exports = config;
