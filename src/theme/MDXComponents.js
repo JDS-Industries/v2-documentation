@@ -1,9 +1,8 @@
-import React from "react";
-// Import the original mapper
-import MDXComponents from "@theme-original/MDXComponents";
-import { Icon } from "@iconify/react";
-import Highlight from "../components/highlight";
-import OptimizedImage from '../components/OptimizedImage/index';
+import MDXComponents from '@theme-original/MDXComponents'
+import { Icon } from '@iconify/react'
+import Highlight from '../components/highlight'
+import OptimizedImage from '../components/OptimizedImage/index'
+import Chip from '../components/chip'
 
 export default {
   // Re-use the default mapping
@@ -11,4 +10,5 @@ export default {
   Icon,
   Highlight,
   OptimizedImage,
-};
+  Chip
+}
