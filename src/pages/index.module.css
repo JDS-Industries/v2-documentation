@@ -9,7 +9,9 @@
   position: relative;
   overflow: hidden;
   color: #fff;
-  background: #082751;
+  background-image: linear-gradient(to bottom, #3a3a3a, #303030, #262626, #1d1d1d, #141414);
+  font-family: Calibri, monospace;
+  
 }
 
 @media screen and (max-width: 996px) {
@@ -17,3 +19,4 @@
     padding: 2rem;
   }
 }
+

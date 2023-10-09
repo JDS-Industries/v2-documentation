@@ -1,9 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Paper from '@mui/material/Paper'
+import Chip from '@mui/material/Chip'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const FeatureList = [
-  {
+{
     title: 'Paperless Documentation',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
@@ -46,14 +49,28 @@ function Feature({Svg, title, description}) {
   );
 }
 
+const darkTheme = createTheme({ palette: { mode: 'dark' } });
+
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
         <div className="row">
+        {/* <ThemeProvider theme={darkTheme}>
+          <Paper variant="elevation" elevation={0} sx={{ p: 2 }}>
+
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+          </Paper>
+        </ThemeProvider> */}
+
+
+          <ThemeProvider theme={darkTheme}>
+            <Paper variant="elevation" elevation={0} sx={{ p: 2 }}>
+              <Chip label="Hello Friend" color="primary" />
+            </Paper>
+          </ThemeProvider>
         </div>
       </div>
     </section>

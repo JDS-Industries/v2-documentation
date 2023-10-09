@@ -1,0 +1,79 @@
+---
+title: Renew SSL Certificate
+---
+
+## Option 1: Renewing an Existing License
+
+1. Download Tomcat certificate through CA (GoDaddy). Be sure to choose Tomcat at download and extract zip file. There should be approximately 4 files to download. We are interested in the file that has the long alphanumeric file name with an extension of .crt.
+
+2. Download <Link to="https://keystore-explorer.org/">KeyStore Explorer tool</Link> on your PC, if you don't already have it.
+
+3. The keystore file is located in `C:/Program Files/mrc/development or production/m-power/tomcat/conf/tomcat.keystore`. Copy this file into the same location that you extracted the files from step 1.
+
+4. Next, open Keystore Explorer and select the keystore from Step 3. The system will prompt you for the password. If you do not know it, you can go to the m-Power server and review the server.xml file in `\tomcat\conf`. Look for the value after the `keystorePass` attribute.
+
+  <OptimizedImage width="600" publicId="v1696536679/v2/documenation/mrc/ssl-cert/keystore_password_khh2qu.png"/ >
+
+5. Once opened, your screen should look similar to the following:
+
+  <OptimizedImage width="600" publicId="v1696536681/v2/documenation/mrc/ssl-cert/keystore_explorer_in62td.png" />
+
+6. Right click on `tomcat` and select Import CA -> From File
+
+7. Enter the keystore password again.
+
+8. Find the .crt file from step 1 with the long alphanumeric name and select it.
+
+9. Confirm import and save file.
+
+10. On the m-Power server, rename the existing keystore (for backup purposes).
+
+11. Copy newly updated keystore back to server.
+
+12. Restart Tomcat (windows service for dev and production)
+
+13. Repeat steps 10-12 above for production.
+
+## Option 2: Creating new keystore from scratch 
+
+1. Open command line on server and enter this command to create keystore:
+keytool -genkey -alias tomcat -keyalg RSA -keysize 2048 -keystore tomcat.keystore
+
+2. Enter in information. The First/Last name is really the address of your website. If using a wildcard, be sure to enter `*.jdsindustries.com`
+
+3. After filling out the rest of the information, you are returned to a command line.
+
+4. Next, create a CSR to send to GoDaddy by entering the following command:
+
+  ```
+  keytool -certreq -alias tomcat -keyalg RSA -file csr.csr -keystore tomcat.keystore
+  ```
+
+  <OptimizedImage width="600" publicId="v1696536681/v2/documenation/mrc/ssl-cert/new_keystore_duk6gn.png" />
+
+5. Enter in password and a new file called csr.csr will be created. Send this file to GoDaddy.
+
+6. Once GoDaddy verifies that this information is valid they will send you several files. 
+  a. The file with “bundle” in the name is the root certificate.
+  b. The file with “gdig” in the name is in the intermediate certificate.
+  c. The file with the long alphanumeric name is your tomcat certificate.
+
+7. Once all of these files and the keystore are in the same folder, run the following commands. **I always advise making a backup of your keystore file before continuing**
+  a. keytool -import -alias root -file gd_bundle-g2-g1.crt -keystore tomcat.keystore
+  b. keytool -import -alias intermediate -file gdig2.crt -keystore tomcat.keystore
+  c. keytool -import -alias tomcat -file 
+
+8. Once completed, you can open this new tomcat.keystore with KeyStore explorer to confirm that it was created successfully.
+
+9. Copy this file onto your development server and restart Tomcat. Verify that Tomcat starts and that the certificate is loaded correctly. If so, repeat this step for production.
+
+## References
+
+:::info
+
+Go Daddy SSL repository: <Link to="https://ssl-ccp.godaddy.com/repository?origin=CALLISTO">`https://ssl-ccp.godaddy.com/repository?origin=CALLISTO`</Link>
+
+Tomcat SSL instructions: <Link to="https://tomcat.apache.org/tomcat-9.0-doc/ssl-howto.html">`https://tomcat.apache.org/tomcat-9.0-doc/ssl-howto.html`</Link>
+
+:::
+

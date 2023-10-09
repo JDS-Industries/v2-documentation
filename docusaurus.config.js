@@ -4,7 +4,7 @@
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: 'Welcome to v2-Documentation',
-	tagline: 'Solution to all of your problems',
+	tagline: 'With the power of Lintatorship, anything is achieveable',
 	favicon: 'img/favicon.ico',
 
 	// Set the production url of your site here
@@ -58,8 +58,6 @@ const config = {
 	themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-    	// Replace with your project's social card
-    	image: 'img/docusaurus-social-card.jpg',
     	navbar: {
     		title: 'JDS Docs',
     		logo: {
@@ -86,6 +84,7 @@ const config = {
     			}
     		]
     	},
+
     	footer: {
     		style: 'dark',
     		links: [
@@ -94,42 +93,11 @@ const config = {
     				items: [
     					{
     						label: 'Tutorial',
-    						to: '/docs/intro'
+    						to: '/docs/index'
     					}
     				]
     			},
-    			{
-    				title: 'Community',
-    				items: [
-    					{
-    						label: 'Stack Overflow',
-    						href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-    					},
-    					{
-    						label: 'Discord',
-    						href: 'https://discordapp.com/invite/docusaurus'
-    					},
-    					{
-    						label: 'Twitter',
-    						href: 'https://twitter.com/docusaurus'
-    					}
-    				]
-    			},
-    			{
-    				title: 'More',
-    				items: [
-    					{
-    						label: 'Blog',
-    						to: '/blog'
-    					},
-    					{
-    						label: 'GitHub',
-    						href: 'https://github.com/facebook/docusaurus'
-    					}
-    				]
-    			}
     		],
-    		copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
     	}
     }),
 
