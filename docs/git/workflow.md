@@ -5,6 +5,8 @@ id: git-workflow
 
 # Git Workflow
 
+[JDS GitHub Repositories](https://github.com/JDS-Industries) <mark>If you aren't using Git you are ruining our codebase!</mark>
+
 ### Before You Work:
 
 Make sure you have the latest copy of master so you don't create merge conflicts with other developers.
