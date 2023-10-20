@@ -67,7 +67,7 @@ const config = {
       navbar: {
         title: 'JDS Docs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'JDS Industries Logo',
           src: 'https://res.cloudinary.com/business-products/image/upload/f_auto,q_auto/v1674774536/v2/logos/jds-logo-icon-only_sevd52.svg',
         },
         // docs: {
@@ -76,19 +76,13 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'jdsSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            type: 'docSidebar',
-            sidebarId: 'gitSidebar',
-            position: 'left',
-            label: 'Git',
-          },
-          {
-            href: 'https://github.com/JDS-Industries/',
+            href: 'https://github.com/orgs/JDS-Industries/repositories',
             label: 'GitHub',
             position: 'right',
           },
@@ -101,50 +95,28 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Home',
+                to: '/',
+              },
+              {
+                label: 'JDS GitHub',
+                to: 'https://github.com/orgs/JDS-Industries/repositories',
+              },
+              {
+                label: 'Docusaurus Tutorial',
                 to: '/docs/intro',
               },
             ],
           },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} JDS Industries. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
-    plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [require.resolve('docusaurus-lunr-search')],
 };
 
 module.exports = config;

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 id: git-workflow
 ---
 
@@ -40,7 +40,7 @@ git add .
 git commit -m "handles form submission for example feature"
 ```
 
-### When feature is Complete and at the End of a Work Day:
+### When Feature is Complete and at the End of a Work Day:
 
 Push the code up to the feature branch to the JDS GitHub Repository.
 
@@ -49,12 +49,13 @@ git pull origin master # pre-emptive check for merge conflicts
 git push -u origin my-example-feature
 ```
 
-### When feature is Complete:
+### When Feature is Complete:
 
-- Open a browser and go to the Github site https://github.com/JDS-Industries/
-- Click on the project you are working where it says "x branches" near the top
-- Locate my-example-feature in the list and click the button to create the pull request
-- Create the pull request and then you can have other developers review the code if you think that is necessary. Anyone can make comments on any line of code.
+- Go to the [GitHub site](https://github.com/JDS-Industries/) and select the project
+- On the project page, click where it says `x branches` near the top
+- Locate `my-example-feature` branch in the list and click the button for `New Pull Request`
+- Click the FIRST green button to finish creating the Pull Request. DO NOT keep clicking to merge it into master branch.
+- Have other developers review the code. Anyone can make comments on any line of code.
 - Once you are ready to go live, click the button to merge the pull request into master
 
 ### Ready to Go Live!:
