@@ -5,7 +5,9 @@ id: git-workflow
 
 # Git Workflow
 
-[JDS GitHub Repositories](https://github.com/JDS-Industries) <mark>If you aren't using Git you are ruining our codebase!</mark>
+[JDS GitHub Repositories](https://github.com/JDS-Industries)
+
+> If you aren't using Git you are ruining our codebase!
 
 ### Before You Work:
 
