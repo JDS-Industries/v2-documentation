@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+id: git-workflow
 ---
 
 # Git Workflow
@@ -10,9 +11,6 @@ Make sure you have the latest copy of master so you don't create merge conflicts
 
 ```bash
 git checkout master
-```
-
-```bash
 git pull
 ```
 
@@ -28,9 +26,6 @@ Now you are on the feature branch and you can begin coding. <mark>make commits o
 
 ```bash
 git add .
-```
-
-```bash
 git commit -m "adds input form fields to the example feature"
 ```
 
@@ -38,9 +33,6 @@ git commit -m "adds input form fields to the example feature"
 
 ```bash
 git add .
-```
-
-```bash
 git commit -m "handles form submission for example feature"
 ```
 
@@ -49,6 +41,7 @@ git commit -m "handles form submission for example feature"
 Push the code up to the feature branch to the JDS GitHub Repository.
 
 ```bash
+git pull origin master # pre-emptive check for merge conflicts
 git push -u origin my-example-feature
 ```
 
@@ -62,11 +55,8 @@ git push -u origin my-example-feature
 
 ### Ready to Go Live!:
 
-Now the code is merged into the master branch but it won't be live until you pull it on the IBM server
+Now the code is merged into the master branch but it won't be live until you follow the correct deployment procedure:
 
-- Open a command prompt and SSH into the IBM I `ssh username@10.1.2.3`
-- Change to the project directory in LIVE: `cd/www/seidenrpm/htdocs/project`
-- Make sure you are the master branch `git checkout master`
-- Pull the changes to go live! `git pull`
+- [V2 Production Deployment (v2-internal-apps, v2-express-api, v2-ecommerce, etc)](deployment#V2)
+- [V1 Production Deployment (SHOP, BROWSE, etc)](deployment#V1)
 
-Now the feature is live and you can leave the feature branch out there if you want. We'll remove the old ones every ~3 months or so.
