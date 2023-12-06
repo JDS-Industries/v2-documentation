@@ -1,6 +1,6 @@
-# Vinyl Sign Supply Products
+# Vinyl & Heat Transfer Sign Supply Products
 
-Vinyl products have different SKU patterns that often require special programming. Each SKU pattern is typically made up of:
+Vinyl & heat transfer products have different SKU patterns that often require special programming. Each SKU pattern is typically made up of:
 
 * Product series (or material) code
 * Color code (typically a 3-digit number number)
