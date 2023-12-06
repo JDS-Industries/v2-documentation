@@ -1,15 +1,18 @@
 # Vinyl Sign Supply Products
 
-Vinyl products have different SKU syntaxes that often require special programming. Each SKU syntax is typically made up of:
+Vinyl products have different SKU patterns that often require special programming. Each SKU pattern is typically made up of:
 
 * Product series (or material) code
 * Color code (typically a 3-digit number number)
 * Width / Length / Height (which sometimes need to be translated)
 * Other separators and codes, depending on vendor
 
-## Example Code / RegExs
+## Product Images
 
-Code can be found in the `v2-express-api` project in the `checkIfSkuIsAVinyl` file in the `actions` folder.
+To make life easier, these products share images based on series/material + color. The "Edit Product" tool automatically handles this when a user uploads an image 
+to a SKU that matches one of the patterns shown below.
+
+> Example code can be found in the `v2-express-api` project in the `checkIfSkuIsAVinyl` file in the `actions` folder.
 
 ## SKU Syntaxes
 
