@@ -58,50 +58,67 @@ const config = {
 	themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-    	navbar: {
-    		title: 'JDS Docs',
-    		logo: {
-    			alt: 'My Site Logo',
-    			src: 'https://res.cloudinary.com/business-products/image/upload/f_auto,q_auto/v1674774536/v2/logos/jds-logo-icon-only_sevd52.svg'
-    		},
-    		items: [
-    			{
-    				type: 'docSidebar',
-    				sidebarId: 'gitSidebar',
-    				position: 'left',
-    				label: 'Git'
-    			},
-    			{
+      // Replace with your project's social card
+      image: 'img/docusaurus-social-card.jpg',
+      navbar: {
+        title: 'JDS Docs',
+        logo: {
+          alt: 'JDS Industries Logo',
+          src: 'https://res.cloudinary.com/business-products/image/upload/f_auto,q_auto/v1674774536/v2/logos/jds-logo-icon-only_sevd52.svg',
+        },
+        // docs: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        // },
+        items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'jdsSidebar',
+            position: 'left',
+            label: 'Documentation',
+          },
+          {
     				type: 'docSidebar',
     				sidebarId: 'mrcSidebar',
     				position: 'left',
     				label: 'Mrc'
     			},
-    			{
-    				href: 'https://github.com/JDS-Industries/',
-    				label: 'GitHub',
-    				position: 'right'
-    			}
-    		]
-    	},
-
-    	footer: {
-    		style: 'dark',
-    		links: [
-    			{
-    				title: 'Docs',
-    				items: [
-    					{
-    						label: 'Tutorial',
-    						to: '/docs/index'
-    					}
-    				]
-    			},
-    		],
-    	}
+          { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            href: 'https://github.com/orgs/JDS-Industries/repositories',
+            label: 'GitHub',
+            position: 'right',
+          },
+        ],
+      },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Home',
+                to: '/',
+              },
+              {
+                label: 'JDS GitHub',
+                to: 'https://github.com/orgs/JDS-Industries/repositories',
+              },
+              {
+                label: 'Docusaurus Tutorial',
+                to: '/docs/intro',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} JDS Industries. Built with Docusaurus.`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+      },
     }),
-
-	plugins: [require.resolve('docusaurus-lunr-search')]
-}
+  plugins: [require.resolve('docusaurus-lunr-search')],
+};
 
 module.exports = config

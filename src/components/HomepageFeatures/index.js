@@ -1,9 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
-import Paper from '@mui/material/Paper'
-import Chip from '@mui/material/Chip'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import React from 'react'
+import clsx from 'clsx'
+import styles from './styles.module.css'
 
 const FeatureList = [
 {
@@ -33,9 +30,9 @@ const FeatureList = [
       </>
     ),
   },
-];
+]
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -46,7 +43,7 @@ function Feature({Svg, title, description}) {
         <p>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
 const darkTheme = createTheme({ palette: { mode: 'dark' } });
@@ -74,5 +71,5 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
-  );
+  )
 }
